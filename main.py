@@ -100,16 +100,16 @@ class BikeRental:
             # Calculo para alugueis de uma hora
             if rentalBasis == 1:
                 # Transformou o tempo em horas para calcular o preço.
-                bill = round(rentalPeriod.seconds / 3600) * 5 * numOfBikes
+                bill = float(rentalPeriod.seconds / 3600) * 5 * numOfBikes
 
 
             # calculo para alugueis de um dia
             elif rentalBasis == 2:
-                bill = round(rentalPeriod.days) * 20 * numOfBikes
+                bill = float(rentalPeriod.days) * 20 * numOfBikes
 
             # calculo para alugueis de uma semaa
             elif rentalBasis == 3:
-                bill = round(rentalPeriod.days / 7) * 60 * numOfBikes
+                bill = float(rentalPeriod.days / 7) * 60 * numOfBikes
 
             # Desconto familia
             if 3 <= numOfBikes <= 5:
